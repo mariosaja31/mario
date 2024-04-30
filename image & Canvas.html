@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contoh Penggunaan Image dan Canvas</title>
+</head>
+<body>
+  <h2>Gambar Asli</h2>
+  <img id="th" src="th.jpeg" alt="th">
+
+  <h2>Canvas</h2>
+  <canvas id="canvas" width="400" height="300"></canvas>
+
+  <script>
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var gambar = document.getElementById('th');
+
+    gambar.onload = function() {
+      context.drawImage(gambar, 0, 0, canvas.width, canvas.height);
+    };
+  </script>
+</body>
+</html>
